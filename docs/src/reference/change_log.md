@@ -5,7 +5,8 @@ We also use this change log to document new features that maintain backward comp
 
 ## New features since last version update
 
-- 19 September 2021: Include "mutational fitness" coloring based on [Obermeyer et al model](https://www.medrxiv.org/content/10.1101/2021.09.07.21263228v1). This annotates each node in the tree with a `mutational_fitness` trait by summing mutational effects from Obermeyer et al Supplementary Data S2. This should provide a mechanism to flag emergence of novel variants that may have higher fitness than circulating viruses.
+ - 29 September 2021: Add three configuration parameters to control the metadata sanitizer step of the workflow. These parameters allow users to specify the metadata columns to use for strain names (`metadata_id_columns`) and to resolve duplicate records with database ids (`database_id_columns`). The new `error_on_duplicate_strains` parameter allows users to ask the workflow to exit with an error when any duplicates appear in the metadata. [See the configuration reference for more details](https://docs.nextstrain.org/projects/ncov/en/latest/reference/configuration.html#sanitize-metadata). ([#728](https://github.com/nextstrain/ncov/pull/728))
+ - 19 September 2021: Include "mutational fitness" coloring based on [Obermeyer et al model](https://www.medrxiv.org/content/10.1101/2021.09.07.21263228v1). This annotates each node in the tree with a `mutational_fitness` trait by summing mutational effects from Obermeyer et al Supplementary Data S2. This should provide a mechanism to flag emergence of novel variants that may have higher fitness than circulating viruses.
 
 ## v8 (19 Aug 2021)
 
